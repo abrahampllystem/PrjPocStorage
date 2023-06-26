@@ -8,11 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MsPocBlobKeyRxjavaApplication implements CommandLineRunner {
 
-    private final SecretClient secretClient;
+    private final SecretClient implClient;
 
-    public MsPocBlobKeyRxjavaApplication(SecretClient secretClient) {
-        this.secretClient = secretClient;
+    public MsPocBlobKeyRxjavaApplication(SecretClient implClient) {
+        this.implClient = implClient;
     }
+
 
     public static void main(String[] args) {
         SpringApplication.run(MsPocBlobKeyRxjavaApplication.class, args);
@@ -20,7 +21,7 @@ public class MsPocBlobKeyRxjavaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("blob: " + secretClient.getSecret("pocback").getValue());
+        System.out.println("blob: " + implClient.getSecret("ntlc-blob-strg-ak-bck05").getValue());
 
     }
 }

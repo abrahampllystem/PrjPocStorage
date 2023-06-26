@@ -1,0 +1,17 @@
+spring.cloud.gateway.httpclient.ssl.use-insecure-trust-manager=true
+
+
+
+azure:
+  storage:
+    zone-id: America/Lima
+    portal-write-expiry-time: 15
+    portal-read-expiry-time: 1440
+    orders-write-expiry-time: 15
+    orders-read-expiry-time: 15
+  keyvault:
+    url: akvteu2ntlcd01
+    client-id: 26570a74-6bdb-4a1e-b8d5-34c77dfab53e
+    tenant-id: 5d93ebcc-f769-4380-8b7e-289fc972da1b
+    pem-certificate-file: ../src/main/resources/certificate/SVPRNTLCAPPDES06.pem
+    secret-name: ntlc-blob-strg-ak-bck05
